@@ -119,6 +119,14 @@ namespace Media.Plugin
 			return CreateMediaIntent (GetRequestId(), "video/*", MediaStore.ActionVideoCapture, options, tasked: false);
 		}
 
+	/// <summary>
+	/// Changes the visiblility of the overlay if it has been defined
+	/// </summary>
+	void ChangeOverlayVisibilityTo(bool visible)
+	{
+		// TODO: overlay not implemented for android
+	}
+
     /// <summary>
     /// Picks a photo from the default gallery
     /// </summary>

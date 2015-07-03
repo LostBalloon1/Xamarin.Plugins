@@ -77,6 +77,12 @@ namespace Media.Plugin.Abstractions
       get;
       set;
     }
+
+	public Object OverlayView
+	{
+		get;
+		set;
+	}
   }
 
   /// <summary>

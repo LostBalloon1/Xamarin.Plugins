@@ -12,6 +12,7 @@ namespace Media.Plugin.Abstractions
     /// Gets if a camera is available on the device
     /// </summary>
     bool IsCameraAvailable { get; }
+
     /// <summary>
     /// Gets if ability to take photos supported on the device
     /// </summary>
@@ -21,6 +22,7 @@ namespace Media.Plugin.Abstractions
     /// Gets if the ability to pick photo is supported on the device
     /// </summary>
     bool IsPickPhotoSupported { get; }
+
     /// <summary>
     /// Gets if ability to take video is supported on the device
     /// </summary>
@@ -32,6 +34,11 @@ namespace Media.Plugin.Abstractions
     bool IsPickVideoSupported { get; }
 
     /// <summary>
+	/// Changes the visiblility of the overlay if it has been defined
+	/// </summary>
+	void ChangeOverlayVisibilityTo(bool visible);
+	
+	/// <summary>
     /// Picks a photo from the default gallery
     /// </summary>
     /// <returns>Media file or null if canceled</returns>
@@ -56,6 +63,5 @@ namespace Media.Plugin.Abstractions
     /// <param name="options">Video Media Options</param>
     /// <returns>Media file of new video or null if canceled</returns>
     Task<MediaFile> TakeVideoAsync(StoreVideoOptions options);
-
   }
 }

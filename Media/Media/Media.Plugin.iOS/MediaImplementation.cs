@@ -96,7 +96,15 @@ namespace Media.Plugin
       var d = new MediaPickerDelegate(null, UIImagePickerControllerSourceType.PhotoLibrary, null);
       return SetupController(d, UIImagePickerControllerSourceType.PhotoLibrary, TypeImage);
     }
-
+	
+		/// <summary>
+		/// Changes the visiblility of the overlay if it has been defined
+		/// </summary>
+		void ChangeOverlayVisibilityTo(bool visible)
+		{
+//			if(pickerDelegate.
+		}
+	
     /// <summary>
     /// Picks a photo from the default gallery
     /// </summary>
@@ -236,6 +244,9 @@ namespace Media.Plugin
       if (sourceType == UIImagePickerControllerSourceType.Camera)
       {
         picker.CameraDevice = GetUICameraDevice(options.DefaultCamera);
+		if (options.OverlayView is UIView) {
+			picker.CameraOverlayView = options.OverlayView as UIView;
+		}
 
         if (mediaType == TypeImage)
           picker.CameraCaptureMode = UIImagePickerControllerCameraCaptureMode.Photo;
