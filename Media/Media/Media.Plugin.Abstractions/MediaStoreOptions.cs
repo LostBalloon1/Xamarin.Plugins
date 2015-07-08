@@ -78,7 +78,7 @@ namespace Media.Plugin.Abstractions
       set;
     }
 
-	public Object OverlayView
+	public Func<Object> OverlayViewProvider
 	{
 		get;
 		set;

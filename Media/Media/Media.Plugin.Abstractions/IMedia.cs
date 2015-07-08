@@ -32,11 +32,6 @@ namespace Media.Plugin.Abstractions
     /// Gets if the ability to pick a video is supported on the device
     /// </summary>
     bool IsPickVideoSupported { get; }
-
-    /// <summary>
-	/// Changes the visiblility of the overlay if it has been defined
-	/// </summary>
-	void ChangeOverlayVisibilityTo(bool visible);
 	
 	/// <summary>
     /// Picks a photo from the default gallery
