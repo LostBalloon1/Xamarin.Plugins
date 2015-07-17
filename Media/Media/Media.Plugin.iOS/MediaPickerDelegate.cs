@@ -151,8 +151,10 @@ namespace Media.Plugin
 				NSNotificationCenter.DefaultCenter.RemoveObserver (this.observer);
 				UIDevice.CurrentDevice.EndGeneratingDeviceOrientationNotifications();
 
-				if (picker.CameraOverlayView != null) {
-					picker.CameraOverlayView.Dispose ();
+				if (IsCaptured) {
+					if (picker.CameraOverlayView != null) {
+						picker.CameraOverlayView.Dispose ();
+					}
 				}
 
 				this.observer.Dispose();

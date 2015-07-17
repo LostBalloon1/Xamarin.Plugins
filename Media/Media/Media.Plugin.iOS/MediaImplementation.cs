@@ -227,11 +227,11 @@ namespace Media.Plugin
         throw new ArgumentException("options.Camera is not a member of CameraDevice");
     }
 
-    private static MediaPickerController SetupController(MediaPickerDelegate mpDelegate, UIImagePickerControllerSourceType sourceType, string mediaType, StoreCameraMediaOptions options = null)
+		private static MediaPickerController SetupController(MediaPickerDelegate mpDelegate, UIImagePickerControllerSourceType sourceType, string mediaType, StoreCameraMediaOptions options = null)
     {
-      var picker = new MediaPickerController(mpDelegate);
+	  MediaPickerController picker = new MediaPickerController(mpDelegate);
       picker.MediaTypes = new[] { mediaType };
-      picker.SourceType = sourceType;
+	  picker.SourceType = sourceType;
 
       if (sourceType == UIImagePickerControllerSourceType.Camera)
       {
